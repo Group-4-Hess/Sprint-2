@@ -117,7 +117,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.group4.sprint2/com.group4.sprint2.HelloApplication</mainClass>
+                            <mainClass>com.group4.sprint2/com.group4.sprint2.Sprint_2</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
