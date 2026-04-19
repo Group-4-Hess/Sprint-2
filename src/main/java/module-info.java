@@ -11,5 +11,10 @@ module com.group4.sprint2 {
     requires eu.hansolo.tilesfx;
 
     opens com.group4.sprint2 to javafx.fxml;
+    opens com.group4.sprint2.Controllers to javafx.fxml;
+
     exports com.group4.sprint2;
+
+
+
 }
