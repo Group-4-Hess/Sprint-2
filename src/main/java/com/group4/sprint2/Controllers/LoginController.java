@@ -1,4 +1,4 @@
-package com.group4.sprint2;
+package com.group4.sprint2.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
