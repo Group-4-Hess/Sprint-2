@@ -10,13 +10,13 @@
             fx:controller="com.group4.sprint2.Controllers.WaiterController"
             stylesheets="@styles/global.css, @styles/waitScreen.css"
             styleClass="primary-bg">
-                <VBox layoutX="50.0" layoutY="50.0" spacing="10.0"
+                <VBox alignment="TOP_CENTER" layoutX="50.0" layoutY="50.0" spacing="10.0"
                     AnchorPane.topAnchor="0.0"
                     AnchorPane.bottomAnchor="0.0"
                     AnchorPane.leftAnchor="0.0"
                     AnchorPane.rightAnchor="0.0">
 
-                    <Label alignment = "CENTER" text="Wait Staff Dashboard" styleClass="header-label, waiter-label" />
+                        <Label alignment = "CENTER" text="Wait Staff Dashboard" styleClass="header-label, waiter-label" />  
 
 
                         <HBox alignment="CENTER">
@@ -94,15 +94,15 @@
                                 text="Table 17" 
                                 onAction="#handleTable"
                                 styleClass="empty-table"/>
-                            <Button fx:id="Table3" 
+                            <Button fx:id="Table18" 
                                 text="Table 18" 
                                 onAction="#handleTable"
                                 styleClass="empty-table"/>
-                            <Button fx:id="Table4" 
+                            <Button fx:id="Table19" 
                                 text="Table 19" 
                                 onAction="#handleTable"
                                 styleClass="empty-table"/>
-                            <Button fx:id="Table5" 
+                            <Button fx:id="Table" 
                                 text="Table 20" 
                                 onAction="#handleTable"
                                 styleClass="empty-table"/>
@@ -151,5 +151,7 @@
                                 onAction="#handleTable"
                                 styleClass="empty-table"/>
                         </HBox>
+                        <Button alignment="CENTER" fx:id = "senderButton" text="Send to Kitchen" onAction="#sendToKitchen" styleClass="button, send-order"/>
+
                 </VBox>
 </AnchorPane>
