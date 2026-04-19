@@ -16,12 +16,11 @@
             fx:controller="com.group4.sprint2.Controllers.LoginController"
             stylesheets="@styles/global.css, @styles/loginScreen.css"
             styleClass="primary-bg">
-    <children>
         <VBox alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <padding>
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
             </padding>
-            <Label fx:id= "invalidLabel" text="" styleClass="header-label"/>
+            <Label fx:id= "invalidLabel" text="" styleClass="header-label, login-label"/>
             <TextField fx:id="usernameField" 
                 promptText="Username"
                 maxWidth= "250.0" 
@@ -41,5 +40,4 @@
                 prefWidth="250.0" 
                 prefHeight="40.0" />  
         </VBox>                
-    </children>
 </AnchorPane>

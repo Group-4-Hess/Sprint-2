@@ -8,10 +8,148 @@
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.group4.sprint2.Controllers.WaiterController"
-            stylesheets="@styles/global.css, @styles/loginScreen.css"
+            stylesheets="@styles/global.css, @styles/waitScreen.css"
             styleClass="primary-bg">
-            <children>
-                <Label text="Wait Staff Screen" layoutX="200.0" layoutY="180.0" />
-            </children>
+                <VBox layoutX="50.0" layoutY="50.0" spacing="10.0"
+                    AnchorPane.topAnchor="0.0"
+                    AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0">
 
+                    <Label alignment = "CENTER" text="Wait Staff Dashboard" styleClass="header-label, waiter-label" />
+
+
+                        <HBox alignment="CENTER">
+                            <Button fx:id="Table1" 
+                                text="Table 1" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table2" 
+                                text="Table 2" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table3" 
+                                text="Table 3" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table4" 
+                                text="Table 4" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table5" 
+                                text="Table 5" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                            <Button fx:id="Table6" 
+                                text="Table 6" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table7" 
+                                text="Table 7" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table8" 
+                                text="Table 8" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table9" 
+                                text="Table 9" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table10" 
+                                text="Table 1-" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                            <Button fx:id="Table11" 
+                                text="Table 11" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table12" 
+                                text="Table 12" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table13" 
+                                text="Table 13" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table14" 
+                                text="Table 14" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table15" 
+                                text="Table 15" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                            <Button fx:id="Table16" 
+                                text="Table 16" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table17" 
+                                text="Table 17" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table3" 
+                                text="Table 18" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table4" 
+                                text="Table 19" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table5" 
+                                text="Table 20" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                            <Button fx:id="Table21" 
+                                text="Table 21" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table22" 
+                                text="Table 22" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table23" 
+                                text="Table 23" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table24" 
+                                text="Table 24" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table25" 
+                                text="Table 25" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                            <Button fx:id="Table26" 
+                                text="Table 26" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table27" 
+                                text="Table 27" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table28" 
+                                text="Table 28" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table29" 
+                                text="Table 29" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                            <Button fx:id="Table30" 
+                                text="Table 30" 
+                                onAction="#handleTable"
+                                styleClass="empty-table"/>
+                        </HBox>
+                </VBox>
 </AnchorPane>

@@ -35,6 +35,7 @@ public class LoginController {
         //checks UN and PW with hardocded password for now (please replace when database is created)
         if(username.equals("admin") && password.equals("admin")) {
             SceneManager.switchScene("wait-staff.fxml");
+
         } 
         else {
             invalidLabel.setText("Invalid username or password.");

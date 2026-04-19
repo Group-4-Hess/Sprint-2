@@ -21,6 +21,7 @@ public class SceneManager {
         Parent root = fxmlLoader.load();
         stage.setScene(new Scene(root, 1000, 900));
         stage.show();
+        stage.setTitle("Restaurant Management System");
     }
 
 
