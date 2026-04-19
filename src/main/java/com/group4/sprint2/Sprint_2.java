@@ -11,6 +11,6 @@ public class Sprint_2 extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         SceneManager.setStage(stage);
-        SceneManager.switchScene("login-screen.fxml", 1000, 900);
+        SceneManager.switchScene("login-screen.fxml");
     }
 }
