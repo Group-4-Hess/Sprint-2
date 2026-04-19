@@ -10,9 +10,12 @@ module com.group4.sprint2 {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires javafx.base;
+    requires com.google.gson;
 
-    opens com.group4.sprint2 to javafx.fxml;
+
+    opens com.group4.sprint2 to javafx.fxml, com.google.gson;
     opens com.group4.sprint2.Controllers to javafx.fxml;
+
 
     exports com.group4.sprint2;
 

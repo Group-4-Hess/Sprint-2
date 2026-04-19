@@ -49,10 +49,10 @@
 
                 <VBox fx:id="foodOptionsPanel" visible="false" managed="false"
                     styleClass="foodPanel" spacing="10">
-                    <Button text="Burger" onAction="#onFoodItemClick"/>
-                    <Button text="Pizza" onAction="#onFoodItemClick"/>
-                    <Button text="Pasta" onAction="#onFoodItemClick"/>
-                    <Button text="Pasta" onAction="#onFoodItemClick"/>
+                    <Button fx:id="button1" text="" onAction="#onFoodItemClick"/>
+                    <Button fx:id="button2" text="" onAction="#onFoodItemClick"/>
+                    <Button fx:id="button3" text="" onAction="#onFoodItemClick"/>
+                    <Button fx:id="button4" text="" onAction="#onFoodItemClick"/>
                 </VBox>
                 <Button fx:id = "completeButton" text="Complete Order" onAction="#completeOrder" styleClass="view-order-button"/>
             </HBox>

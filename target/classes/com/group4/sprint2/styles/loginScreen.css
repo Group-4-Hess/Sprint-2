@@ -1,8 +1,8 @@
 .button{
-    -fx-padding: 10px 20px; /* Padding around the text */
-    -fx-font-size: 30px; /* Font size */
-    -fx-border-radius: 5px; /* Rounded corners */
-    -fx-background-radius: 5px; /* Rounded background */
+    -fx-padding: 10px 20px; 
+    -fx-font-size: 30px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
 }
 
 .button:hover {
@@ -10,7 +10,7 @@
 }
 
 /* Automatically triggers when mouse is held down on it */
-.buttontable:s {
+.button:pressed {
     -fx-background-color: rgb(91, 91, 91);
 }
 

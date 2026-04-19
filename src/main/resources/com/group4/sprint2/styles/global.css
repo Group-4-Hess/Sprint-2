@@ -1,16 +1,29 @@
+/* colors */
+
 .primary-bg {
     -fx-background-color: #494949;
 }
 
+/* Headings and Labels */
+
 .header-label{
-    -fx-font-size: 50px; /* Font size */
-    -fx-font-weight: bold; /* Bold text */
-    -fx-padding: 20px; /* Padding around the label */
+    -fx-font-size: 50px; 
+    -fx-font-weight: bold; 
+    -fx-padding: 20px; 
 }
 
+/* Buttons */
 
 .button {
     -fx-background-color: #949494;
     -fx-text-fill: rgb(0, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: rgb(128, 128, 128);
+}
+
+.button:pressed {
+    -fx-background-color: rgb(91, 91, 91);
 }
 
