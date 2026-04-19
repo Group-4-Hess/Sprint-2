@@ -1,5 +1,9 @@
 package com.group4.sprint2.Controllers;
 
+import java.io.IOException;
+
+import com.group4.sprint2.Managers.SceneManager;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
@@ -8,7 +12,7 @@ public class LoginController {
     private Label loginText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        loginText.setText("the button works!");
+    protected void onLoginButtonClick() throws IOException {
+        SceneManager.switchScene("host staff.fxml", 1500, 900);
     }
 }

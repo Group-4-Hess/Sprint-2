@@ -14,13 +14,13 @@ public class SceneManager {
         SceneManager.stage = stage;
     }
 
-    public static void switchScene(String fxmlFile) throws IOException{
-        // Code to switch scenes using the provided FXML file
-        FXMLLoader fxmlLoader = new FXMLLoader(SceneManager.class.getResource("com/group4/sprint2/" + fxmlFile));
-        Parent root = fxmlLoader.load();
-        stage.setScene(new Scene(root));
-        stage.show();
+    public static void switchScene(String fxmlFile, int width, int height) throws IOException {
+        var url = SceneManager.class.getResource("/com/group4/sprint2/" + fxmlFile);
         
+        FXMLLoader fxmlLoader = new FXMLLoader(url);
+        Parent root = fxmlLoader.load();
+        stage.setScene(new Scene(root, width, height));
+        stage.show();
     }
 
 

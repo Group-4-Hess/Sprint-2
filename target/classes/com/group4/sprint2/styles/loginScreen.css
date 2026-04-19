@@ -1,1 +1,6 @@
-.root { -fx-background-color: #f4f4f4; }
+.button{
+    -fx-padding: 10px 20px; /* Padding around the text */
+    -fx-font-size: 50px; /* Font size */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-background-radius: 5px; /* Rounded background */
+}
