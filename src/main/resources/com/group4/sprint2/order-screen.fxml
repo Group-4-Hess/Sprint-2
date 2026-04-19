@@ -21,8 +21,9 @@
                     AnchorPane.leftAnchor="0.0"
                     AnchorPane.rightAnchor="0.0">
 
-                    <Label alignment = "CENTER" 
-                        text="Order Dashboard" 
+                    <Label fx:id = "tableLabel" 
+                        alignment = "CENTER" 
+                        text="" 
                         styleClass="header-label, waiter-label" />
                     <Button fx:id="soupButton"
                         text = "Soups" 
@@ -53,6 +54,6 @@
                     <Button text="Pasta" onAction="#onFoodItemClick"/>
                     <Button text="Pasta" onAction="#onFoodItemClick"/>
                 </VBox>
-                <Button text="Complete Order" onAction="#completeOrder" styleClass="view-order-button"/>
+                <Button fx:id = "completeButton" text="Complete Order" onAction="#completeOrder" styleClass="view-order-button"/>
             </HBox>
 </AnchorPane>
