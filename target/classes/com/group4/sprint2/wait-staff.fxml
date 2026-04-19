@@ -6,9 +6,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.group4.sprint2.Controllers.WaiterController"
+            stylesheets="@styles/global.css, @styles/loginScreen.css"
+            styleClass="primary-bg">
+            <children>
+                <Label text="Wait Staff Screen" layoutX="200.0" layoutY="180.0" />
+            </children>
 
 </AnchorPane>

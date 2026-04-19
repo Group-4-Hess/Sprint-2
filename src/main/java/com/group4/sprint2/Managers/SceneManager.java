@@ -14,12 +14,12 @@ public class SceneManager {
         SceneManager.stage = stage;
     }
 
-    public static void switchScene(String fxmlFile, int width, int height) throws IOException {
+    public static void switchScene(String fxmlFile) throws IOException {
         var url = SceneManager.class.getResource("/com/group4/sprint2/" + fxmlFile);
         
         FXMLLoader fxmlLoader = new FXMLLoader(url);
         Parent root = fxmlLoader.load();
-        stage.setScene(new Scene(root, width, height));
+        stage.setScene(new Scene(root, 1000, 900));
         stage.show();
     }
 
