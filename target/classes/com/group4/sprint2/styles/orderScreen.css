@@ -1,0 +1,24 @@
+.category-button {
+    -fx-background-radius: 5em;
+    -fx-min-width: 80px;
+    -fx-min-height: 80px;
+    -fx-max-width: 80px;
+    -fx-max-height: 80px;
+}
+
+.foodPanel {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 4);
+}
+
+.view-order-button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px 20px;
+}

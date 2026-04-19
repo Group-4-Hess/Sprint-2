@@ -9,6 +9,7 @@ module com.group4.sprint2 {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires javafx.base;
 
     opens com.group4.sprint2 to javafx.fxml;
     opens com.group4.sprint2.Controllers to javafx.fxml;

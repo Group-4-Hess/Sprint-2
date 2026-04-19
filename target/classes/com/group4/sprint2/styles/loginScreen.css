@@ -5,9 +5,16 @@
     -fx-background-radius: 5px; /* Rounded background */
 }
 
-.header-label{
-    -fx-font-size: 50px; /* Font size */
-    -fx-font-weight: bold; /* Bold text */
-    -fx-text-fill: #d7d7d7; /* Text color */
-    -fx-padding: 20px; /* Padding around the label */
+.button:hover {
+    -fx-background-color: rgb(128, 128, 128);
+}
+
+/* Automatically triggers when mouse is held down on it */
+.buttontable:s {
+    -fx-background-color: rgb(91, 91, 91);
+}
+
+
+.login-label{
+    -fx-text-fill: #cacaca; /* Text color */
 }
