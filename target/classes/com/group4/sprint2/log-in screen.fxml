@@ -5,6 +5,11 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
+
+
+<!-- <VBox stylesheets="@style.css"> ... </VBox -->
+
+
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.group4.sprint2.LoginController">
     <padding>
@@ -12,5 +17,6 @@
     </padding>
 
     <Label fx:id="loginText"/>
+
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
 </VBox>
