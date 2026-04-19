@@ -24,15 +24,19 @@ public class WaiterController {
     @FXML 
     protected void handleTable(ActionEvent event) throws IOException {
         Button table = (Button) event.getSource();
+        String tableName = table.getText(); 
         Stage newWindow = new Stage();
-
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/group4/sprint2/order-screen.fxml"));
         Parent root = loader.load();
-
+    
+        OrderController orderController = loader.getController();
+        orderController.setTable(tableName);
+    
         newWindow.setScene(new Scene(root, 800, 900));
-        newWindow.setTitle("Order Screen");
+        newWindow.setTitle("Orders - " + tableName);
         newWindow.show();
-
+    
     }
+
 }

@@ -1,10 +1,11 @@
-.category-button {
-    -fx-background-radius: 5em;
-    -fx-min-width: 80px;
-    -fx-min-height: 80px;
-    -fx-max-width: 80px;
-    -fx-max-height: 80px;
+
+/* Headings and Labels */
+
+.waiter-label{
+    -fx-text-fill: rgb(255, 255, 255); /* Text color */
 }
+
+/* Buttons */
 
 .foodPanel {
     -fx-background-color: white;
@@ -13,6 +14,14 @@
     -fx-background-radius: 8px;
     -fx-padding: 10px;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 4);
+}
+
+.category-button {
+    -fx-background-radius: 5em;
+    -fx-min-width: 80px;
+    -fx-min-height: 80px;
+    -fx-max-width: 80px;
+    -fx-max-height: 80px;
 }
 
 .view-order-button {

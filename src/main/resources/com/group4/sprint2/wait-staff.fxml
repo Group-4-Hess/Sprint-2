@@ -59,7 +59,7 @@
                                 onAction="#handleTable"
                                 styleClass="empty-table"/>
                             <Button fx:id="Table10" 
-                                text="Table 1-" 
+                                text="Table 10" 
                                 onAction="#handleTable"
                                 styleClass="empty-table"/>
                         </HBox>
