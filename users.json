@@ -13,7 +13,7 @@
         "username": "bob",
         "password": "1234",
         "role": "waiter"
-    }
+    },
     {
       "username": "carol",
       "password": "2006",
@@ -23,7 +23,7 @@
         "username": "kierin",
         "password": "1234",
         "role": "waiter"
-    }
+    },
     {
       "username": "kazi",
       "password": "1234",
@@ -33,7 +33,7 @@
         "username": "caiden",
         "password": "1234",
         "role": "waiter"
-    }
+    },
     {
       "username": "mathieu",
       "password": "1234",

@@ -1,14 +1,10 @@
 com/group4/sprint2/Models/Order.class
-com/group4/sprint2/Managers/UserManager$1.class
 com/group4/sprint2/Controllers/OrderController.class
 com/group4/sprint2/Controllers/StatusController.class
-com/group4/sprint2/Managers/UserManager.class
 com/group4/sprint2/Managers/SceneManager.class
 com/group4/sprint2/Managers/OrderManager$1.class
 com/group4/sprint2/Managers/OrderManager.class
 com/group4/sprint2/Sprint_2.class
-com/group4/sprint2/Models/User.class
 module-info.class
-com/group4/sprint2/Controllers/LoginController.class
 com/group4/sprint2/Controllers/WaiterController.class
 com/group4/sprint2/Launcher.class

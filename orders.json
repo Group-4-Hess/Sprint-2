@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "tableName": "Table 1",
+    "items": "Tomato Soup\n",
+    "timestamp": "2026-04-19T23:06:16.696324"
+  },
+  {
+    "tableName": "Table 8",
+    "items": "Minestrone Soup\nMinestrone Soup\nMinestrone Soup\n",
+    "timestamp": "2026-04-19T23:06:25.212307"
+  }
+]

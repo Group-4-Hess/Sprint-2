@@ -7,65 +7,110 @@ import com.group4.sprint2.Models.Order;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+
+/**
+ * Controller for the order screen, responsible for managing food category
+ * selection, food item selection, and order completion for a specific table.
+ * <p>
+ * This controller is linked to {@code order-screen.fxml} and communicates
+ * back to the {@link WaiterController} upon order completion.
+ * </p>
+ *
+ * @see WaiterController
+ * @see OrderManager
+ * @see Order
+ */
 public class OrderController {
 
+    /**
+     * Reference to the {@link WaiterController} that opened this order window.
+     * Used to communicate order completion back to the waiter screen.
+     */
     private WaiterController waiterController; 
 
+    /** Accumulates the selected food items as a newline-separated string. */
+    private String order = ""; 
+
+    /** Label displaying the current table name at the top of the order screen. */
+    @FXML
+    private Label tableLabel;
+    
+    /** The name of the table this order belongs to. */
+    private String tableName;
+
+    
+    /**
+     * Sets the reference to the parent {@link WaiterController}.
+     *
+     * @param waiterController the {@link WaiterController} that opened this window
+     */
     public void setWaiterController(WaiterController waiterController) {
         this.waiterController = waiterController;
     }
 
 
-    @FXML
-    private Label tableLabel;
-
-    private String tableName;
-
+   
+    /**
+    * Sets the table name for this order and updates the on-screen label.
+    *
+    * @param tableName the name of the table (e.g., "Table 1")
+    */
     public void setTable(String tableName) {
         this.tableName = tableName;
         tableLabel.setText("Order: " + tableName); // display it on screen
     }
+    
 
-    private String order = ""; 
-    /**
-     * opens and closes the food options panel when a category button is clicked
-     * 
-     * @param isVisible | the visibility state of the food options panel
-     * @return void
-     * @throws IOException
-     */
 
+    /** The panel containing food item buttons, shown when a category is selected. */
     @FXML 
     private VBox foodOptionsPanel;
 
+    /** Food item button 1 - dynamically updated based on selected category */
     @FXML
     private Button button1;
+    
+    /** Food item button 2 - dynamically updated based on selected category */
     @FXML
     private Button button2;
+    
+    /** Food item button 3 - dynamically updated based on selected category */
     @FXML
     private Button button3;
+    
+    /** Food item button 4 - dynamically updated based on selected category */
     @FXML
     private Button button4;
 
 
-
+    /**
+     * Handles category button clicks, showing the food options panel and
+     * populating it with menu items relevant to the selected category.
+     * <p>
+     * Supported categories: Soups, Salads, Entrees, Drinks, Desserts.
+     * </p>
+     *
+     * @param event the {@link ActionEvent} triggered by clicking a category button
+     * @throws IOException if an I/O error occurs
+     */        
     @FXML
     protected void categorySelected(ActionEvent event) throws IOException {
         
-        foodOptionsPanel.setVisible(true);   // toggle
-        foodOptionsPanel.setManaged(true);   // toggle space too
+        foodOptionsPanel.setVisible(true); 
+        foodOptionsPanel.setManaged(true);   
 
 
         Button clicked = (Button) event.getSource();
         String category = clicked.getText();
 
-        //change button text to actual food options from database (probably find a way to spawn a button in per order instead of having a set number?)
-        if(category.equals("Soups")) {
+
+    if(category.equals("Soups")) {
             System.out.println("Soups selected");
 
             button1.setText("Chicken Noodle Soup");
@@ -104,12 +149,13 @@ public class OrderController {
     }
 
 
-    /**
-     * selects a food item and adds it to the order when it is clicked
-     * 
-     * @param clicked | the food item button clicked by the user
-     * @return void
-     * @throws IOException
+/**
+     * Handles food item button clicks, appending the selected item to the order.
+     * <p>
+     * Each clicked item is added to the running order string separated by newlines.
+     * </p>
+     *
+     * @param event the {@link ActionEvent} triggered by clicking a food item button
      */
     @FXML
     private void onFoodItemClick(ActionEvent event) {
@@ -120,28 +166,32 @@ public class OrderController {
     }
 
     /**
-     * prints order details into the console and closes order window when complete order button is clicked
-     * 
-     * @param stage | represents the current order window stage to be closed after order completion
-     * @return void
-     * @throws IOException
+     * Completes the current order by saving it to the JSON file via
+     * {@link OrderManager}, notifying the {@link WaiterController},
+     * and closing the order window.
+     * <p>
+     * Uses the {@link ActionEvent} source to retrieve the current
+     * {@link Stage} and close it without requiring a direct button reference.
+     * </p>
+     *
+     * @param event the {@link ActionEvent} triggered by clicking the complete order button
      */
-
-    private Button completeButton;
-
     @FXML
-    private void completeOrder() {
-        
-        Order order = new Order(tableName, this.order);
+    private void completeOrder(ActionEvent event) {
+        Order newOrder = new Order(tableName, this.order);
         try {
-            OrderManager.saveOrder(order);
+            OrderManager.saveOrder(newOrder);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        Stage stage = (Stage) completeButton.getScene().getWindow();
-        stage.close();
+        if (waiterController != null) {
+            waiterController.setOrder(order);
+        }
 
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.close();
     }
+
 
 }
