@@ -5,13 +5,43 @@
       "role": "admin"
     },
     {
-      "username": "cadu",
-      "password": "hidee",
+      "username": "alice",
+      "password": "1234",
       "role": "waiter"
     },
     {
-        "username": "best",
-        "password": "waiter",
+        "username": "bob",
+        "password": "1234",
+        "role": "waiter"
+    }
+    {
+      "username": "carol",
+      "password": "2006",
+      "role": "waiter"
+    },
+    {
+        "username": "kierin",
+        "password": "1234",
+        "role": "waiter"
+    }
+    {
+      "username": "kazi",
+      "password": "1234",
+      "role": "waiter"
+    },
+    {
+        "username": "caiden",
+        "password": "1234",
+        "role": "waiter"
+    }
+    {
+      "username": "mathieu",
+      "password": "1234",
+      "role": "waiter"
+    },
+    {
+        "username": "Professor_Hess",
+        "password": "1234",
         "role": "waiter"
     }
   ]
