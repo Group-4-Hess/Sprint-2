@@ -17,4 +17,4 @@ How to run program:
 3. You may add items by clicking a table. you will be given 5 categories to choose from a left side panel menu. 
 From there you will see a 2nd side panel menu on the right for selecting which of the 4 available options to mark down.
 4. Item's added to the tab will appear in the compiler in order and would be sent to the chef once you press the "Send to Kitchen" button.
-5. Once the user is done they may logout on the table selection screen on the top right.
+5. Once the user is done they may logout on the table selection screen on the top left.
