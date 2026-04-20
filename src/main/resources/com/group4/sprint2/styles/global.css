@@ -7,6 +7,7 @@
 /* Headings and Labels */
 
 .header-label{
+    -fx-text-fill: rgb(203, 203, 203);
     -fx-font-size: 50px; 
     -fx-font-weight: bold; 
     -fx-padding: 20px; 

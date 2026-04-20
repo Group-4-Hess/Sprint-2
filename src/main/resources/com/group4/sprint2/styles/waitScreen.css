@@ -15,7 +15,7 @@
     -fx-alignment: center;
     -fx-re: 50px;
     -fx-pref-width: 140px;
-    -fx-pref-height:95px;
+    -fx-pref-height:90px;
 }
 .empty-table:hover {
     -fx-background-color: rgb(42, 148, 54);
@@ -25,10 +25,51 @@
     -fx-background-color: rgb(38, 134, 49);
 }
 
+.occupied-table {
+    -fx-background-color: rgb(249, 235, 50);
+    -fx-border-color: black;
+    -fx-text-fill: rgb(0, 0, 0);
+    fx-font-weight: bold;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-alignment: center;
+    -fx-re: 50px;
+    -fx-pref-width: 140px;
+    -fx-pref-height:90px;
+}
+.occupied-table:hover {
+    -fx-background-color: rgb(225, 211, 57);
+}
+
+.occupied-table:pressed {
+    -fx-background-color: rgb(211, 209, 56);
+}
+
+.dirty-table {
+    -fx-background-color: rgb(164, 47, 47);
+    -fx-border-color: black;
+    -fx-text-fill: rgb(0, 0, 0);
+    fx-font-weight: bold;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-alignment: center;
+    -fx-re: 50px;
+    -fx-pref-width: 140px;
+    -fx-pref-height:90px;
+}
+.dirty-table:hover {
+    -fx-background-color: rgb(148, 42, 42);
+}
+
+.dirty-table:pressed {
+    -fx-background-color: rgb(134, 38, 38);
+}
+
 .send-order {
     -fx-padding: 5px 15px; 
     -fx-font-size: 30px; 
     -fx-border-radius: 5px; 
     -fx-background-radius: 5px; 
 }
+
 

@@ -3,6 +3,8 @@ package com.group4.sprint2.Controllers;
 import java.io.IOException;
 
 import com.group4.sprint2.Managers.SceneManager;
+import com.group4.sprint2.Managers.UserManager;
+import com.group4.sprint2.Models.User;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -29,16 +31,20 @@ public class LoginController {
      */
     @FXML 
     protected void onLoginButtonClick() throws IOException {
-        String username = usernameField.getText();
-        String password = passwordField.getText();
+        String username = usernameField.getText().trim();
+        String password = passwordField.getText().trim();
 
-        //checks UN and PW with hardocded password for now (please replace when database is created)
-        if(username.equals("admin") && password.equals("admin")) {
-            SceneManager.switchScene("wait-staff.fxml");
-
-        } 
-        else {
-            invalidLabel.setText("Invalid username or password.");
+        User user = UserManager.findUser(username);
+        if (user == null) {
+            invalidLabel.setText("User not found.");
+            return;
         }
+    
+        if (!user.getPassword().equals(password)) {
+            invalidLabel.setText("Incorrect password.");
+            return;
+        }
+
+        SceneManager.switchScene("wait-staff.fxml");
     }
 }
