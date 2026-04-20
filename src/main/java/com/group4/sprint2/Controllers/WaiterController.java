@@ -219,4 +219,19 @@ public class WaiterController {
     private void handleLogout() throws IOException {
         SceneManager.switchScene("login-screen.fxml");
     }
+
+    /**
+     * Receives the completed order string from {@link OrderController}
+     * upon order completion.
+     * <p>
+     * Currently logs the order to the console. Can be extended to update
+     * the UI or trigger additional workflows.
+     * </p>
+     *
+     * @param order the completed order string containing all selected items
+     */
+    public void setOrder(String order) {
+        System.out.println("Order received: " + order);
+    }
+
 }

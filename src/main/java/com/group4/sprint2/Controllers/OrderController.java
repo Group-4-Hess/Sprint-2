@@ -7,6 +7,7 @@ import com.group4.sprint2.Models.Order;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
@@ -164,9 +165,6 @@ public class OrderController {
 
     }
 
-
-    private Button completeButton;
-
     /**
      * Completes the current order by saving it to the JSON file via
      * {@link OrderManager}, notifying the {@link WaiterController},
@@ -179,18 +177,21 @@ public class OrderController {
      * @param event the {@link ActionEvent} triggered by clicking the complete order button
      */
     @FXML
-    private void completeOrder() {
-        
-        Order order = new Order(tableName, this.order);
+    private void completeOrder(ActionEvent event) {
+        Order newOrder = new Order(tableName, this.order);
         try {
-            OrderManager.saveOrder(order);
+            OrderManager.saveOrder(newOrder);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        Stage stage = (Stage) completeButton.getScene().getWindow();
-        stage.close();
+        if (waiterController != null) {
+            waiterController.setOrder(order);
+        }
 
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.close();
     }
+
 
 }

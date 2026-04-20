@@ -10,6 +10,7 @@ module com.group4.sprint2 {
     requires eu.hansolo.tilesfx;
     requires javafx.base;
     requires com.google.gson;
+    requires javafx.graphics;
 
     exports com.group4.sprint2;
     exports com.group4.sprint2.Models;
