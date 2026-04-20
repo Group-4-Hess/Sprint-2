@@ -1,4 +1,4 @@
-package com.group4.sprint2;
+package com.group4.sprint2.Models;
 
 import java.time.LocalDateTime;
 

@@ -14,7 +14,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
-import com.group4.sprint2.Order;
+import com.group4.sprint2.Models.Order;
 
 
 public class OrderManager {
@@ -85,4 +85,11 @@ public class OrderManager {
             System.out.println("--------------------------------");
         }
     }
+
+    public static void clearOrders() throws IOException {
+        try (FileWriter writer = new FileWriter(FILE_PATH)) {
+            writer.write("[]"); 
+        }
+    }
+    
 }

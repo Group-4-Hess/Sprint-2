@@ -3,7 +3,7 @@ package com.group4.sprint2.Controllers;
 import java.io.IOException;
 
 import com.group4.sprint2.Managers.OrderManager;
-import com.group4.sprint2.Order;
+import com.group4.sprint2.Models.Order;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -127,7 +127,6 @@ public class OrderController {
      * @throws IOException
      */
 
-    @FXML
     private Button completeButton;
 
     @FXML
