@@ -2,58 +2,71 @@
 
 <?import java.lang.*?>
 <?import java.util.*?>
+<?import java.net.URL?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<?import javafx.scene.shape.Rectangle?>
-
-
+<?import javafx.geometry.Insets?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.group4.sprint2.Controllers.OrderController"
-            stylesheets="@styles/global.css, @styles/orderScreen.css"
             styleClass="primary-bg">
-            <HBox alignment="CENTER" spacing="10.0" AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                <VBox layoutX="50.0" layoutY="50.0" spacing="10.0"
-                    AnchorPane.topAnchor="0.0"
-                    AnchorPane.bottomAnchor="0.0"
-                    AnchorPane.leftAnchor="0.0"
-                    AnchorPane.rightAnchor="0.0">
+    <stylesheets>
+        <URL value="@styles/global.css"/>
+        <URL value="@styles/orderScreen.css"/>
+    </stylesheets>
 
-                    <Label fx:id = "tableLabel" 
-                        alignment = "CENTER" 
-                        text="" 
-                        styleClass="header-label, waiter-label" />
-                    <Button fx:id="soupButton"
-                        text = "Soups" 
-                        onAction="#categorySelected" 
-                        styleClass="category-button"/>
-                    <Button fx:id="saladButton"
-                        text = "Salads" 
-                        onAction="#categorySelected" 
-                        styleClass="category-button"/>
-                    <Button fx:id="entreeButton"
-                        text = "Entrees" 
-                        onAction="#categorySelected" 
-                        styleClass="category-button"/>
-                    <Button fx:id="drinksButton"
-                        text = "Drinks" 
-                        onAction="#categorySelected" 
-                        styleClass="category-button"/>
-                      <Button fx:id="dessertButton"
-                        text = "Desserts" 
-                        onAction="#categorySelected" 
-                        styleClass="category-button"/>  
-                </VBox>
+    <VBox spacing="10.0"
+          AnchorPane.topAnchor="0.0"
+          AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0">
 
-                <VBox fx:id="foodOptionsPanel" visible="false" managed="false"
-                    styleClass="foodPanel" spacing="10">
-                    <Button fx:id="button1" text="" onAction="#onFoodItemClick"/>
-                    <Button fx:id="button2" text="" onAction="#onFoodItemClick"/>
-                    <Button fx:id="button3" text="" onAction="#onFoodItemClick"/>
-                    <Button fx:id="button4" text="" onAction="#onFoodItemClick"/>
-                </VBox>
-                <Button fx:id = "completeButton" text="Complete Order" onAction="#completeOrder" styleClass="view-order-button"/>
-            </HBox>
+        <padding>
+            <Insets top="20" left="20" right="20" bottom="20"/>
+        </padding>
+
+        <Label fx:id="tableLabel" text="" alignment="CENTER"
+               styleClass="header-label, waiter-label"
+               maxWidth="Infinity"/>
+
+        <!-- Side by side category + food options -->
+        <HBox spacing="20.0" alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+
+                <!-- Left: Category buttons -->
+            <VBox spacing="10.0" alignment="TOP_CENTER" HBox.hgrow="ALWAYS" prefWidth="300">
+                <Button fx:id="soupButton"    text="Soups"   onAction="#categorySelected"
+                        styleClass="category-button" maxWidth="Infinity" prefHeight="50"/>
+                <Button fx:id="saladButton"   text="Salads"  onAction="#categorySelected"
+                        styleClass="category-button" maxWidth="Infinity" prefHeight="50"/>
+                <Button fx:id="entreeButton"  text="Entrees" onAction="#categorySelected"
+                        styleClass="category-button" maxWidth="Infinity" prefHeight="50"/>
+                <Button fx:id="drinksButton"  text="Drinks"  onAction="#categorySelected"
+                        styleClass="category-button" maxWidth="Infinity" prefHeight="50"/>
+                <Button fx:id="dessertButton" text="Desserts" onAction="#categorySelected"
+                        styleClass="category-button" maxWidth="Infinity" prefHeight="50"/>
+            </VBox>
+
+            <!-- Right: Food options panel -->
+            <VBox alignment="TOP_CENTER" fx:id="foodOptionsPanel" visible="false" managed="true"
+                styleClass="foodPanel" spacing="10.0"
+                HBox.hgrow="ALWAYS" prefWidth="300">
+                <Button fx:id="button1" text="" onAction="#onFoodItemClick"
+                        maxWidth="Infinity" prefHeight="50"/>
+                <Button fx:id="button2" text="" onAction="#onFoodItemClick"
+                        maxWidth="Infinity" prefHeight="50"/>
+                <Button fx:id="button3" text="" onAction="#onFoodItemClick"
+                        maxWidth="Infinity" prefHeight="50"/>
+                <Button fx:id="button4" text="" onAction="#onFoodItemClick"
+                        maxWidth="Infinity" prefHeight="50"/>
+            </VBox>
+
+        </HBox>
+
+        <HBox alignment="CENTER" VBox.vgrow="NEVER">
+            <Button fx:id="completeButton" text="Complete Order"
+                    onAction="#completeOrder" styleClass="view-order-button"/>
+        </HBox>
+
+    </VBox>
 </AnchorPane>

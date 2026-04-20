@@ -3,6 +3,7 @@ package com.group4.sprint2.Controllers;
 import java.io.IOException;
 
 import com.group4.sprint2.Managers.OrderManager;
+import com.group4.sprint2.Managers.SceneManager;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -41,7 +42,7 @@ public class WaiterController {
             StatusController statusController = loader.getController();
             statusController.setWaiterController(this);
 
-            newWindow.setScene(new Scene(root, 500, 500));
+            newWindow.setScene(new Scene(root, 500, 300));
             newWindow.setTitle("Set " + tableName + " Status");
             newWindow.show();
         }
@@ -121,4 +122,8 @@ public class WaiterController {
         OrderManager.printKitchenOrders();
     }
 
+    @FXML
+    private void handleLogout() throws IOException {
+        SceneManager.switchScene("login-screen.fxml");
+    }
 }

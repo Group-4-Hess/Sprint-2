@@ -15,7 +15,7 @@
     -fx-alignment: center;
     -fx-re: 50px;
     -fx-pref-width: 140px;
-    -fx-pref-height:95px;
+    -fx-pref-height:90px;
 }
 .empty-table:hover {
     -fx-background-color: rgb(42, 148, 54);
@@ -35,7 +35,7 @@
     -fx-alignment: center;
     -fx-re: 50px;
     -fx-pref-width: 140px;
-    -fx-pref-height:95px;
+    -fx-pref-height:90px;
 }
 .occupied-table:hover {
     -fx-background-color: rgb(225, 211, 57);
@@ -55,7 +55,7 @@
     -fx-alignment: center;
     -fx-re: 50px;
     -fx-pref-width: 140px;
-    -fx-pref-height:95px;
+    -fx-pref-height:90px;
 }
 .dirty-table:hover {
     -fx-background-color: rgb(148, 42, 42);

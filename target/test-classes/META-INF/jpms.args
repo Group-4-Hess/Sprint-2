@@ -1,0 +1,4 @@
+--patch-module
+com.group4.sprint2=_
+--add-reads
+com.group4.sprint2=ALL-UNNAMED
